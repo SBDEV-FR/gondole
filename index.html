@@ -151,10 +151,15 @@ table.ba{width:100%;border-collapse:collapse;font-size:clamp(15.5px,1.15vw,17px)
 .portrait span{font:800 clamp(110px,14vw,220px)/.8 var(--display);font-variation-settings:"opsz" 96,"wdth" 75;color:rgba(251,246,236,.1);position:absolute;top:24px;left:20px;letter-spacing:-.04em}
 .expert h2{font-size:clamp(34px,4.6vw,68px);max-width:16ch}
 .expert .role-title{font-size:clamp(17px,1.4vw,20px);margin:18px 0 22px;font-weight:500}
+.expert .role-title span{display:block;margin-top:4px;font:700 clamp(15px,1.2vw,17px)/1.3 var(--display);font-variation-settings:"wdth" 92;color:var(--encre-douce)}
+.portrait em{font-style:normal;line-height:1.35}
+.proof{margin-top:26px;padding-left:18px;border-left:var(--shelf) solid var(--jaune);font:700 clamp(22px,2.2vw,30px)/1.15 var(--display);font-variation-settings:"opsz" 72,"wdth" 88;letter-spacing:-.015em;max-width:22ch}
+.formats-title{margin-top:44px;font:700 22px/1.2 var(--display);font-variation-settings:"wdth" 92}
+.formats-title + p{margin-top:6px}
 .roles{display:grid;grid-template-columns:1fr 1fr;gap:26px var(--gutter);margin-top:36px;padding-top:30px;border-top:1px solid var(--filet)}
 .roles b{display:block;font:700 20px/1.2 var(--display);font-variation-settings:"wdth" 92;margin-bottom:4px}
 .roles p{font-size:15.5px}
-.formats{list-style:none;margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.formats{list-style:none;margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .formats li{background:var(--creme);border-radius:10px;padding:16px 18px;font-size:15px}
 .formats b{display:block;font-weight:600}
 
@@ -237,6 +242,11 @@ footer .shelf-rule{color:var(--creme);margin:36px 0 26px}
   .logo{font-size:25px}
   .logo svg{width:34px}
   .portrait{aspect-ratio:4/3}
+  /* titres et accroches pleine largeur : plus de vide à droite */
+  h2,.expert h2,.cta h2,.diff .quote-big,.hero-foot .aside,.foot-top .tag,.testimony blockquote,.stats p,.proof{max-width:none;text-wrap:pretty}
+  h2{font-size:clamp(34px,10.4vw,46px)}
+  .cta h2{font-size:clamp(44px,13vw,58px)}
+  .diff .quote-big{font-size:clamp(32px,9.6vw,42px)}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -382,17 +392,21 @@ footer .shelf-rule{color:var(--creme);margin:36px 0 26px}
 
 <section class="expert" id="expert">
   <div class="wrap expert-grid">
-    <div class="portrait"><span aria-hidden="true">EA</span>Lorem ipsum</div>
+    <!-- PHOTO : remplacer ce bloc par <img class="portrait" src="assets/emmanuel.jpg" alt="Emmanuel Ansoud"> -->
+    <div class="portrait"><span aria-hidden="true">EA</span><em>Emmanuel Ansoud<br>Growing Ideas</em></div>
     <div>
       <h2>Emmanuel Ansoud, la voix du category management augmenté</h2>
-      <p class="role-title">Category manager évangéliste</p>
+      <p class="role-title">Category manager évangéliste<span>Growing Ideas</span></p>
       <p>Il connaît les process, les irritants et les décideurs. Il co-conçoit les offres et il les vend.</p>
+      <p class="proof">Un category manager évangéliste derrière chaque agent.</p>
       <div class="roles">
         <div><b>Co-designer</b><p class="muted">Choisit les process, valide chaque agent.</p></div>
         <div><b>Évangéliste</b><p class="muted">Prend la parole chaque semaine sur LinkedIn.</p></div>
         <div><b>Vendeur</b><p class="muted">Mène les rendez-vous avec les décideurs.</p></div>
         <div><b>Garant</b><p class="muted">Signe la qualité métier des livrables.</p></div>
       </div>
+      <h3 class="formats-title">Formats signature</h3>
+      <p class="muted">Emmanuel installe le sujet « category management augmenté ».</p>
       <ul class="formats">
         <li><b>Le rayon de la semaine</b>Un rayon décrypté en 5 points</li>
         <li><b>Débrief de négo</b>Les leçons d’une saison</li>
