@@ -106,6 +106,11 @@ table.ba{width:100%;border-collapse:collapse;font-size:clamp(15.5px,1.15vw,17px)
 .ba td:nth-child(3){font-weight:600}
 .ba-note{margin-top:24px;font:700 clamp(19px,1.6vw,22px)/1.2 var(--display);font-variation-settings:"wdth" 90}
 
+/* Faire en interne ? */
+.interne{background:var(--sable)}
+.interne .intro{margin-top:20px;font-size:clamp(17px,1.4vw,20px)}
+.ba-diy{margin-top:clamp(32px,4.5vw,60px)}
+
 /* Agents : étagères */
 .rack{display:grid;grid-template-columns:repeat(3,1fr);column-gap:var(--gutter);margin-top:clamp(48px,7vw,96px)}
 .rack article{padding-bottom:28px;display:flex;flex-direction:column;justify-content:flex-end}
@@ -221,6 +226,7 @@ footer .shelf-rule{color:var(--creme);margin:36px 0 26px}
   .ba td:nth-child(2)::before,.ba td:nth-child(3)::before{display:block;font-size:12.5px;font-weight:500;color:var(--encre-douce);margin-top:8px}
   .ba td:nth-child(2)::before{content:"Aujourd’hui"}
   .ba td:nth-child(3)::before{content:"Avec Gondole"}
+  .ba-diy td:nth-child(2)::before{content:"Fait en interne"}
   .roles{grid-template-columns:1fr;gap:20px}
   .formats{grid-template-columns:1fr}
   .offer-list li{grid-template-columns:1fr}
@@ -371,7 +377,25 @@ footer .shelf-rule{color:var(--creme);margin:36px 0 26px}
   </div>
 </section>
 
-<section id="offre" style="padding-top:0">
+<section class="interne" id="interne">
+  <div class="wrap">
+    <h2>Le faire en interne avec l’IA ? C’est possible.</h2>
+    <p class="intro">Avec ChatGPT ou Claude, un category manager motivé peut monter un premier assistant en quelques jours. Les modèles sont accessibles à tous. La différence se joue sur tout ce qu’il y a autour.</p>
+    <table class="ba ba-diy">
+      <thead><tr><th>Ce qui compte</th><th>Fait en interne</th><th>Avec Gondole</th></tr></thead>
+      <tbody>
+        <tr><td>Des chiffres fiables</td><td>Une réponse plausible, à revérifier ligne à ligne</td><td>Calculs contrôlés, chaque chiffre relié à sa source</td></tr>
+        <tr><td>Des données protégées</td><td>Exports panel et enseigne collés dans un outil grand public</td><td>Environnement dédié, données jamais utilisées pour entraîner un modèle, cadre RGPD et licences panel respectés</td></tr>
+        <tr><td>Le savoir-faire métier</td><td>Un prompt qui ignore ce qu’attend un acheteur</td><td>Une méthode conçue et validée par un category manager de terrain</td></tr>
+        <tr><td>La durée</td><td>Un prototype qui casse au prochain format d’export, ou au départ de son auteur</td><td>Agents maintenus et mis à jour à chaque période de données</td></tr>
+        <tr><td>Le temps de vos équipes</td><td>Des semaines de bricolage prises sur la catégorie</td><td>Opérationnel sur une première catégorie dès le diagnostic</td></tr>
+      </tbody>
+    </table>
+    <p class="ba-note">Le modèle est le même pour tous. La méthode et la fiabilité, non.</p>
+  </div>
+</section>
+
+<section id="offre">
   <div class="wrap">
     <h2>Une porte d’entrée courte, puis un abonnement</h2>
     <div class="offer-grid">
